@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUJ Unity Fest - Home</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Optional: Your custom styles -->
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="bg-white font-poppins text-gray-800">
+
+	<!-- Header -->
+	<header class="bg-yellow-500 shadow-md">
+		<div
+			class="container mx-auto px-4 flex items-center justify-between py-4">
+			<div class="w-40">
+				<img src="https://i.postimg.cc/sgrj0k9h/MUJ-Unity-Fest-Logo-6-1.png"
+					alt="Logo">
+			</div>
+			<button onclick="toggleMenu()" class="md:hidden">
+				<img src="https://i.postimg.cc/T25T2dtb/burger-menu-svgrepo-com.png"
+					alt="Menu" class="w-6 h-6">
+			</button>
+			<ul class="hidden md:flex space-x-6 items-center font-semibold">
+				<li><a th:href="@{/mujunityfestmember/home}"
+					class="hover:text-blue-600">Home</a></li>
+				<li><a th:href="@{/mujunityfestmember/construction}"
+					class="hover:text-blue-600">Competitions</a></li>
+				<li><a th:href="@{/mujunityfestmember/construction}"
+					class="hover:text-blue-600">Sponsor</a></li>
+				<li><a th:href="@{/mujunityfestmember/about}"
+					class="text-blue-600 font-bold">About Us</a></li>
+				<li><a th:href="@{/mujunityfestmember/contact}"
+					class="hover:text-blue-600">Contact Us</a></li>
+			</ul>
+			<div class="hidden md:block">
+				<button
+					class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Login</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hero / Intro Video Section -->
+	<section class="relative w-full">
+		<div id="video"
+			style="position: relative; width: 100%; height: 0px; padding-bottom: 56.250%">
+			<iframe allow="autoplay; fullscreen" allowfullscreen
+				src="https://streamable.com/e/hb5hd3?autoplay=1&muted=1"
+				style="border: none; width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden;">
+			</iframe>
+		</div>
+	</section>
+
+
+	<!-- About the Event -->
+	<section class="py-16 bg-gray-50">
+		<div class="container mx-auto px-4 text-center">
+			<h2 class="text-3xl font-bold mb-4">
+				About the <span class="text-blue-600">event</span>
+			</h2>
+			<p class="text-gray-600 max-w-2xl mx-auto mb-10">Lorem ipsum
+				dolor sit amet, consectetur adipiscing elit...</p>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="text-center">
+					<img src="https://i.postimg.cc/13XQTyV4/feature-1.png"
+						class="mx-auto mb-4 w-24 h-24" />
+					<h3 class="text-lg font-semibold">Unforgettable experience</h3>
+				</div>
+				<div class="text-center">
+					<img src="https://i.postimg.cc/gk0QcNzT/feature-2.png"
+						class="mx-auto mb-4 w-24 h-24" />
+					<h3 class="text-lg font-semibold">Fun events & games</h3>
+				</div>
+				<div class="text-center">
+					<img src="https://i.postimg.cc/FRmCMxCG/feature-3.png"
+						class="mx-auto mb-4 w-24 h-24" />
+					<h3 class="text-lg font-semibold">Networking</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Event Schedule -->
+	<section class="py-16">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-10">
+				Event <span class="text-blue-600">Schedule</span>
+			</h2>
+			<div class="space-y-6 max-w-2xl mx-auto">
+				<div class="p-4 bg-white rounded shadow">
+					<h3 class="text-xl font-semibold">Opening Ceremony</h3>
+					<p class="text-sm text-gray-500">9:00 - 10:00AM</p>
+				</div>
+				<div class="p-4 bg-white rounded shadow">
+					<h3 class="text-xl font-semibold">Competition Round 1</h3>
+					<p class="text-sm text-gray-500">10:30 - 12:30PM</p>
+				</div>
+				<div class="p-4 bg-white rounded shadow">
+					<h3 class="text-xl font-semibold">Lunch Break</h3>
+					<p class="text-sm text-gray-500">1:00 - 2:00PM</p>
+				</div>
+				<div class="p-4 bg-white rounded shadow">
+					<h3 class="text-xl font-semibold">Networking Session</h3>
+					<p class="text-sm text-gray-500">2:30 - 4:00PM</p>
+				</div>
+				<div class="p-4 bg-white rounded shadow">
+					<h3 class="text-xl font-semibold">Awards Ceremony</h3>
+					<p class="text-sm text-gray-500">5:00 - 6:30PM</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Gallery -->
+	<section class="bg-gray-100 py-16">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-10">
+				Check our <span class="text-blue-600">Gallery</span>
+			</h2>
+			<div
+				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-7xl mx-auto">
+				<!-- Repeat this block for each image -->
+				<img src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 1" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 2" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 3" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 4" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 5" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 6" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 7" class="rounded-lg w-full h-48 object-cover" /> <img
+					src="https://i.postimg.cc/7LqgDQDC/gallery-1.png"
+					alt="Gallery 8" class="rounded-lg w-full h-48 object-cover" />
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="py-16">
+		<div class="container mx-auto px-4 max-w-3xl">
+			<h2 class="text-3xl font-bold text-center mb-10">
+				Frequently <span class="text-blue-600">Asked</span> Questions
+			</h2>
+			<div class="space-y-4">
+				<details class="border rounded p-4">
+					<summary class="font-semibold cursor-pointer">WHEN DOES
+						THE EVENT RUN?</summary>
+					<p class="text-sm mt-2">The MUJ Unity Fest will run from April
+						15–17, 2025...</p>
+				</details>
+				<details class="border rounded p-4">
+					<summary class="font-semibold cursor-pointer">WHERE DOES
+						THE EVENT RUN?</summary>
+					<p class="text-sm mt-2">At the Manipal University Jaipur
+						campus...</p>
+				</details>
+				<details class="border rounded p-4">
+					<summary class="font-semibold cursor-pointer">HOW DO I
+						REGISTER FOR COMPETITIONS?</summary>
+					<p class="text-sm mt-2">Through the website by creating an
+						account...</p>
+				</details>
+				<details class="border rounded p-4">
+					<summary class="font-semibold cursor-pointer">ARE THERE
+						ACCOMMODATION OPTIONS?</summary>
+					<p class="text-sm mt-2">Yes, limited on-campus accommodation is
+						available...</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-800 text-white py-10">
+		<div class="container mx-auto px-4">
+			<div
+				class="flex flex-col md:flex-row justify-between items-center mb-6">
+				<div class="text-center md:text-left mb-4 md:mb-0">
+					<img
+						src="https://i.postimg.cc/sgrj0k9h/MUJ-Unity-Fest-Logo-6-1.png"
+						class="w-32 mx-auto md:mx-0 mb-2" />
+					<p class="text-sm">Uniting Students, Building Connections...</p>
+				</div>
+				<ul class="flex flex-wrap gap-4 text-sm justify-center">
+					<li><a th:href="@{/mujunityfestmember/home}"
+						class="hover:underline">Home</a></li>
+					<li><a th:href="@{/mujunityfestmember/construction}"
+						class="hover:underline">Competitions</a></li>
+					<li><a th:href="@{/mujunityfestmember/about}"
+						class="hover:underline">About</a></li>
+					<li><a th:href="@{/mujunityfestmember/contact}"
+						class="hover:underline">Contact</a></li>
+				</ul>
+				<div class="flex gap-4 mt-4 md:mt-0">
+					<a href="https://www.instagram.com/muj_unity_fest/" target="_blank"
+						class="text-white hover:text-pink-500"> <i
+						class="fab fa-instagram text-xl"></i>
+					</a> <a href="https://wa.me/919761914738" target="_blank"
+						class="text-white hover:text-green-500"> <i
+						class="fab fa-whatsapp text-xl"></i>
+					</a>
+				</div>
+			</div>
+			<div class="text-center text-xs text-gray-400">
+				<p>&copy; 2025 MUJ Unity Fest. All rights reserved.</p>
+				<div class="mt-2 space-x-2">
+					<a th:href="@{/mujunityfestmember/construction}"
+						class="hover:underline">Privacy Policy</a> | <a
+						th:href="@{/mujunityfestmember/construction}"
+						class="hover:underline">Terms</a> | <a
+						th:href="@{/mujunityfestmember/contact}" class="hover:underline">Contact</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scroll To Top -->
+	<button id="goToTopBtn"
+		class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
+		↑</button>
+
+	<!-- Scripts -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
+	<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
